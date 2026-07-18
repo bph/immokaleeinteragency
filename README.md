@@ -42,7 +42,7 @@ The `CNAME` file in this repository already tells GitHub Pages to serve the site
 | A     | `@`                   | `185.199.111.153`         |
 | CNAME | `www`                 | `bph.github.io`           |
 
-> **Note:** Replace `bph.github.io` with `<your-github-username>.github.io` if the organisation/user name differs.
+> **Note:** `bph.github.io` is the correct value for this repository (GitHub user **bph**). If the repository is ever transferred to a different account, replace it with `<new-username>.github.io`.
 
 DNS changes can take up to 48 hours to propagate. Once propagated, GitHub will automatically provision a free TLS certificate via Let's Encrypt.
 
