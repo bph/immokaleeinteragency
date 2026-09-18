@@ -1,0 +1,291 @@
+:root {
+  --ink: #2b2b2b;
+  --blue: #35668f;
+  --blue-dark: #2a526f;
+  --orange: #e2a13a;
+  --panel: #eeeeee;
+  --white: #ffffff;
+  --link: #2a526f;
+  --max-width: 1200px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.5;
+}
+
+a { color: var(--link); }
+a:hover { color: var(--blue); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* Header */
+.site-header {
+  border-top: 5px solid #1a1a1a;
+  padding: 20px 24px 18px;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.brand-name {
+  margin: 0 0 4px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.brand-tagline {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background: var(--blue);
+}
+
+.site-nav a {
+  display: block;
+  padding: 12px 18px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  background: var(--blue-dark);
+  color: var(--white);
+}
+
+/* Divider under header */
+.site-header {
+  border-bottom: 3px solid var(--orange);
+}
+
+/* Intro / homepage content */
+.intro {
+  background: var(--panel);
+  padding: 40px 24px;
+}
+
+.intro-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.intro h1 {
+  font-size: 1.6rem;
+  line-height: 1.35;
+  max-width: 30ch;
+  margin: 0 0 32px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  padding: 20px 24px;
+}
+
+.card-highlight {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.card-highlight a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.card-plain {
+  background: var(--white);
+  color: var(--blue-dark);
+  font-weight: bold;
+}
+
+.meeting-photo img {
+  border: 1px solid #ccc;
+}
+
+.coordinators {
+  margin-top: 32px;
+}
+
+.coordinators-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.coordinators ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.coordinators li {
+  margin-bottom: 4px;
+}
+
+/* Full-width hero photo between intro and subscribe */
+.hero-photo {
+  margin: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+}
+
+/* Subscribe / form */
+.subscribe {
+  padding: 48px 24px;
+}
+
+.subscribe-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.subscribe-card {
+  border-top: 6px solid #4a8f4a;
+  background: var(--white);
+  padding: 4px 4px 24px;
+}
+
+.subscribe-card h2 {
+  margin: 24px 0 12px;
+  font-size: 1.7rem;
+}
+
+.subscribe-card p {
+  margin: 0;
+  color: #444;
+}
+
+.form-embed {
+  margin-top: 24px;
+}
+
+.form-embed iframe {
+  width: 100%;
+  border: none;
+}
+
+/* Gallery grid */
+.gallery {
+  padding: 0 24px 48px;
+}
+
+.gallery-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-grid img,
+.gallery-grid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-grid figure:first-child { border-radius: 16px 0 0 0; }
+.gallery-grid figure:nth-child(3) { border-radius: 0 16px 0 0; }
+.gallery-grid figure:nth-child(4) { border-radius: 0 0 0 16px; }
+.gallery-grid figure:last-child { border-radius: 0 0 16px 0; }
+
+@media (max-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Policy page cartoon image */
+.policy-image {
+  float: right;
+  margin: 0 0 20px 24px;
+  max-width: 220px;
+}
+
+.policy-image img {
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+  .policy-image {
+    float: none;
+    margin: 0 auto 24px;
+    max-width: 260px;
+  }
+}
+
+/* Policy page */
+.policy {
+  padding: 48px 24px;
+}
+
+.policy-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.policy h1 {
+  margin-top: 0;
+}
+
+.policy p {
+  margin: 0 0 18px;
+}
+
+/* Footer */
+.site-footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .site-nav ul {
+    flex-wrap: wrap;
+  }
+}
