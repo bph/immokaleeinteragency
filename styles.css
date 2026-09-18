@@ -92,7 +92,6 @@ img { max-width: 100%; height: auto; display: block; }
 .intro h1 {
   font-size: 1.6rem;
   line-height: 1.35;
-  max-width: 30ch;
   margin: 0 0 32px;
 }
 
@@ -134,7 +133,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .coordinators {
-  margin-top: 32px;
+  margin-top: 0;
 }
 
 .coordinators-label {
@@ -170,26 +169,6 @@ img { max-width: 100%; height: auto; display: block; }
 .subscribe-inner {
   max-width: 700px;
   margin: 0 auto;
-}
-
-.subscribe-card {
-  border-top: 6px solid #4a8f4a;
-  background: var(--white);
-  padding: 4px 4px 24px;
-}
-
-.subscribe-card h2 {
-  margin: 24px 0 12px;
-  font-size: 1.7rem;
-}
-
-.subscribe-card p {
-  margin: 0;
-  color: #444;
-}
-
-.form-embed {
-  margin-top: 24px;
 }
 
 .form-embed iframe {
